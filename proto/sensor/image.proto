@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package SensorMsg;
+
+import "common/header.proto";
+
+message Image {
+  CommonMsg.Header header = 1;
+
+  int32 rows = 2;
+  int32 cols = 3;
+  int32 elt_type = 4;
+  bytes mat_data = 5;
+}

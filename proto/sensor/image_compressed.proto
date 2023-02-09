@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package SensorMsg;
+
+import "common/header.proto";
+
+message ImageCompressed {
+  CommonMsg.Header header = 1;
+
+  int32 size = 2;
+  string compress_type = 3;
+  bytes image_data = 4;
+}
